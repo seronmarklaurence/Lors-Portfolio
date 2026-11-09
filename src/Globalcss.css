@@ -1,0 +1,117 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition:
+    background-color .5s cubic-bezier(.22,1,.36,1),
+    border-color .5s cubic-bezier(.22,1,.36,1),
+    box-shadow .5s cubic-bezier(.22,1,.36,1);
+}
+
+:root {
+  /* Breakpoints */
+  --bp-sm: 480px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xlg: 1200px;
+
+  /* Typography */
+  --primary-font: "Roboto", "Poppins", "Montserrat", sans-serif;
+  --text-sm: 0.8rem;
+  --text-base: 1rem;
+  --text-lg: 1.5rem;
+  --text-xl: 6rem;
+
+  /* Theme */
+    --counter: white;
+  --text-color: #e4f1fe;
+  --accent: #0f172a;
+  --accent-2: #1e293b;
+  --highlight: #0ea5e9;
+  --highlight-2: #5557d1;
+  --background-bg:
+    radial-gradient(
+      circle at bottom right,
+      rgba(from var(--highlight-2) r g b/ 0.3),
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at top left,
+      rgba(from var(--highlight) r g b/ 0.3),
+      transparent 50%
+    ),
+    radial-gradient(circle at top right, var(--accent-2), var(--accent));
+  --radius: 20px;
+  --shadow-hero: 7px 7px 15px 3px rgb(0 0 0/0.9);
+  --shadow: 10px 10px 15px 3px rgb(0 0 0/0.9);
+  --container-padding: 20px;
+  --counter-accent: #d39766;
+  --counter-accent-2: #fbfbd4;
+  --counter-highlight: #c05800;
+
+  /* Standard Line Height */
+  --lh-body: 1.6;
+}
+
+[data-theme="dark"] {
+  --text-color: #612c00;
+  --accent: #d39766; /* Primary action color (buttons, links, CTAs) */
+  --accent-2: #fbfbd4; /* Light surface / text highlight on dark backgrounds */
+  --counter: black;
+  --highlight: #c05800; /* Hover states, secondary emphasis, active accents */
+  --highlight-2: #38240d; /* Deep background / base dark tone */
+
+  --background-bg:
+    radial-gradient(
+      circle at bottom right,
+      rgba(from var(--highlight) r g b/ 0.3),
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at top left,
+      rgba(from var(--accent-2) r g b/ 0.3),
+      transparent 50%
+    ),
+    radial-gradient(circle at top right, var(--accent-2), var(--accent-2));
+  --counter-accent: #0f172a;
+  --counter-accent-2: #1e293b;
+  --counter-highlight: #0ea5e9;
+}
+
+.dashboard-container {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 30px;
+}
+
+html,
+body,
+#root {
+  width: 100dvw;
+  height: 100dvh;
+  overflow-x: hidden;
+
+  /* connect the body to your Master Switch */
+  font-size: var(--font-size);
+  font-family: var(--primary-font);
+}
+
+.app-container {
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-heading {
+  font-size: clamp(1.3rem, 1.8vw + 1rem, 3.5rem);
+  font-weight: bold;
+  color: var(--highlight);
+  scroll-margin-top: 80px; /* Added your scroll margin here! */
+}

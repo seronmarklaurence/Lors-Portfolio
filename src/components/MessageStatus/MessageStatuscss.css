@@ -1,0 +1,42 @@
+.message-status-wrapper{
+  width: 60%;
+}
+
+.status-alert{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+  border-radius: 25px;
+  padding: .8rem;
+}
+
+.status-alert > svg{
+  font-size: 2rem;
+}
+
+
+
+/* SUCCESS */
+.status-alert.success-text {
+  color: #34d399;
+  border-color: rgba(52, 211, 153, 0.35);
+  box-shadow: 0 10px 30px rgba(52, 211, 153, 0.15);
+  border: 1px solid green;
+  text-align: center;
+}
+
+/* ERROR */
+.status-alert.error-text {
+  color: #fb7185;
+  border-color: rgba(251, 113, 133, 0.35);
+  box-shadow: 0 10px 30px rgba(251, 113, 133, 0.15);
+    border: 1px solid red;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  .message-status-wrapper{
+  width: min(500px, 100%);
+}
+}

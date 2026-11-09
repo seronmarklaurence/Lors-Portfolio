@@ -1,0 +1,91 @@
+/* ================================
+S C R O L L  B A R  D E S I G N 
+   ================================ */
+.dashboard-container::-webkit-scrollbar {
+  width: 10px;
+  max-height: 5px;
+}
+
+/* track (background) */
+.dashboard-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* handle (the draggable part) */
+.dashboard-container::-webkit-scrollbar-thumb {
+  background: rgba(from var(--highlight) r g b / 0.6);
+  border-radius: 10px;
+}
+
+/* hover effect */
+.dashboard-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(from var(--text-color) r g b / 0.4);
+}
+
+/* ================================
+D A S H  B O A R D  C O N T A I N E R
+   ================================ */
+.dashboard-container {
+  height: 90%;
+  width: 100%;
+  background: var(--background-bg);
+  overflow-y: auto;
+  color: var(--text-color);
+}
+
+.dashboard-container{
+  padding: 20px 20px 0 20px;
+}
+
+.footer {
+  margin: 40px -20px 0 -20px;
+  min-height: 10%;
+  background-color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ================================
+A B O U T     C O N T A I N E R
+   ================================ */
+.about-container {
+  width: 100%;
+  height: auto;
+}
+
+/* ================================
+   P R O J E C T S   C O N T A I N E R
+   ================================ */
+hr {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--highlight),
+    transparent
+  );
+  margin: 50px 0;
+  width: 100%;
+}
+
+.projects-container {
+  width: 100%;
+}
+
+/* ================================
+S K I L L S    C O N T A I N E R
+   ================================ */
+.skills-container {
+  width: 100%;
+  min-height: 50%;
+}
+
+/* ================================
+C O N T A C T    C O N T A I N E R
+   ================================ */
+.contact-container {
+  width: 100%;
+  min-height: 50%;
+}
