@@ -145,7 +145,7 @@
 
   border: 1px solid rgb(15, 0, 0);
 
-  color: var(--text-color);
+  color: var(--text-input-color);
   outline: none;
 
 box-shadow:
